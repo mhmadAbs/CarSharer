@@ -1,3 +1,4 @@
+
 package de.unidue.inf.is;
 
 import java.io.IOException;
@@ -14,12 +15,12 @@ import de.unidue.inf.is.domain.User;
 
 
 
-
 /**
  * Einfaches Beispiel, das die Vewendung der Template-Engine zeigt.
  * Will be called when /hello is called
  */
 
+/*
 
 @WebServlet(urlPatterns = {"/hello"}, name = "helloServlet") 
 public final class HelloServlet extends HttpServlet {
@@ -66,4 +67,7 @@ public final class HelloServlet extends HttpServlet {
         // Display the list again after an Entry was added.
         doGet(request, response);
     }
+   
 }
+
+*/

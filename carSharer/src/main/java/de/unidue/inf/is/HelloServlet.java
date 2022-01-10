@@ -31,11 +31,11 @@ public final class HelloServlet extends HttpServlet {
 
     // Just prepare static data to display on screen
     static {
-        userList.add(new User(1, "Bill Gates", "gates@gmail.com"));
-        userList.add(new User(2, "Steve Jobs", "jobs@gmail.com"));
-        userList.add(new User(3, "Larry Page", "page@gmail.com"));
-        userList.add(new User(4, "Sergey Brin", "page@gmail.com"));
-        userList.add(new User(5, "Larry Ellison", "ellison@gmail.com"));
+        userList.add(new User("Bill", "Gates"));
+        userList.add(new User("Steve", "Jobs"));
+        userList.add(new User("Larry", "Page"));
+        userList.add(new User("Sergey", "Brin"));
+        userList.add(new User("Larry", "Ellison"));
     }
 
     // will be called when the Servlet has been called

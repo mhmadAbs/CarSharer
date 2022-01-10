@@ -1,10 +1,5 @@
 package de.unidue.inf.is.domain;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import de.unidue.inf.is.utils.DBUtil;
 
 // Transportmittel : {tid : integer, name : String, icon : String]}
 
@@ -14,13 +9,8 @@ public final class Transporter {
 	private String name;
 	private String icon; // Not sure about datatype
 	
-	public Transporter(int tid, String name, String icon) {
-		this.tid = tid;
-		this.name = name;
-		this.icon = icon;
-		//Bus :"https://freedesignfile.com/upload/2017/08/bus-icon-vector.jpg";
-		//Car : this.icon = "https://cdn-icons-png.flaticon.com/512/741/741411.png";
-	
+	public Transporter() {
+		
 	}
 
 	public int getTid() {
@@ -35,12 +25,17 @@ public final class Transporter {
 		return name;
 	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	public String getIcon(int id) {
-		
+	public String getIcon() {
 		return icon;
 	}
 
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
 	
 	
 	

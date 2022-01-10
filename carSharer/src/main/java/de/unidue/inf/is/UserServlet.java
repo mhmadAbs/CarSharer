@@ -1,7 +1,6 @@
 package de.unidue.inf.is;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +17,6 @@ import de.unidue.inf.is.stores.UserStore;
  * Einfaches Beispiel, das die Verwendung des {@link UserStore}s zeigt.
  */
 
-
-
 @WebServlet("/user")
 public final class UserServlet extends HttpServlet {
 
@@ -30,25 +27,16 @@ public final class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // mach was
-        User userToAdd;
-		try {
-			userToAdd = new User(10, "Manfred Mustermann", "muster@gmail.com");
-			try (UserStore userStore = new UserStore()) {
-	            userStore.addUser(userToAdd);
-	            // userStore.somethingElse();
-	            userStore.complete();
-	        }
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        User userToAdd = new User("Manfred", "Mustermann");
 
-        
+        try (UserStore userStore = new UserStore()) {
+            userStore.addUser(userToAdd);
+            // userStore.somethingElse();
+            userStore.complete();
+        }
 
         // mach noch mehr
 
     }
 
 }
-
-

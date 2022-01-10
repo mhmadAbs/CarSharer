@@ -12,7 +12,7 @@ public final class DrivingLicence {
 	public DrivingLicence(int number, Date exp_date, User user) {
 		this.number = number;
 		this.exp_date = exp_date;
-		this.user_id = user.getId();
+		this.user_id = user.getUid();
 	}
 
 	public int getNumber() {

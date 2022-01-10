@@ -48,9 +48,9 @@ public class DateTimeUtil {
     public static String convertDateAndTimeToDB2DateTime(String dateStr, String timeStr) {
         String datetimeStr = null;
         try {
-            Date parsedDate = new SimpleDateFormat("yyyy.MM.dd").parse(dateStr);
+            Date parsedDate = new SimpleDateFormat("dd.MM.yyyy").parse(dateStr);
             Date parsedTime = new SimpleDateFormat("HH:mm").parse(timeStr);
-            datetimeStr = new SimpleDateFormat("yyyy-MM-dd").format(parsedDate) + "-" + new SimpleDateFormat("HH.mm.ss.SSSSSS").format(parsedTime);
+            datetimeStr = new SimpleDateFormat("yyyy-MM-dd").format(parsedDate) + " " + new SimpleDateFormat("HH:mm:ss.SSSSSS").format(parsedTime);
         } catch (ParseException e) {
             e.printStackTrace();
         }
